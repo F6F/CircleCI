@@ -33,4 +33,5 @@ workflows:
 
   exampleContext:
     jobs:
-      - build
+      - build:
+          context: exampleContext
