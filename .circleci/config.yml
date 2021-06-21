@@ -15,7 +15,10 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "world"
+      - restore_cache:
+          keys:
+            - simpleMesage
+      - run: cat test.txt
   build:
     docker:
       - image: circleci/node:13.8.0
